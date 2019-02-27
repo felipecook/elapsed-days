@@ -13,6 +13,12 @@ public class DateOnly {
     int days = day - 1;
     int tempYear = year;
     int leapDays = 0;
+    int tempHolder = 0;
+
+    if (month > 12) {
+      tempHolder = month % 12;
+    }
+
 
     if(year<GROUND_ZERO){
       GROUND_ZERO = year;
